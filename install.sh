@@ -46,6 +46,9 @@ systemctl enable dhcpcd
 systemctl enable sshd
 systemctl enable vboxservice
 
+mkdir -p /media && chown root:wheel /media
+usermod -a -G vboxsf $USER_NAME
+
 pacman -Scc <<EOF
 y
 y
