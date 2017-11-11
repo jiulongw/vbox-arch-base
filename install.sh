@@ -40,9 +40,13 @@ mkdir -p /home/$USER_NAME/.ssh
 curl -L "$USER_PUBKEY_URL" > /home/$USER_NAME/.ssh/authorized_keys
 chown $USER_NAME:$USER_NAME /home/$USER_NAME/.ssh/authorized_keys
 
+pacman -S --noconfirm --needed linux-headers virtualbox-guest-dkms
+
 systemctl enable dhcpcd
 systemctl enable sshd
+systemctl enable vboxservice
 
 pacman -Scc --noconfirm
 
+rm /root/install.sh
 cat /dev/null > /root/.bash_history && history -c
