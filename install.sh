@@ -48,5 +48,8 @@ systemctl enable vboxservice
 
 pacman -Scc --noconfirm
 
+dd if=/dev/zero of=/ZERO bs=4M
+
+rm /ZERO
 rm /root/install.sh
 cat /dev/null > /root/.bash_history && history -c
