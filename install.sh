@@ -42,3 +42,7 @@ chown $USER_NAME:$USER_NAME /home/$USER_NAME/.ssh/authorized_keys
 
 systemctl enable dhcpcd
 systemctl enable sshd
+
+pacman -Scc --noconfirm
+
+cat /dev/null > /root/.bash_history && history -c
