@@ -5,7 +5,7 @@ curl -L goo.gl/fPxQv7 | bash
 ```
 
 # Under the hood
-It creates a single partition with ext4 file system for `/dev/sda` (with
+It creates a single partition with `ext4` file system for `/dev/sda` (with
 `EF02` partition reserved for grub), then installs `virtualbox-guest-utils`
 in addition to the `base` package group.
 
